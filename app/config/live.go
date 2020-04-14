@@ -16,5 +16,4 @@ var Live = []byte(`
     "enabled":true
   }
 }
-
 `)
