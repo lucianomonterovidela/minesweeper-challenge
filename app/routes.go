@@ -9,4 +9,8 @@ import (
 func Routes(s *server.Server) {
 	handlerRoot := handlers.NewHandlerHealth()
 	s.AddRoute("/", handlerRoot.Health, http.MethodGet)
+
+	handlerUser := handlers.NewHandlerUser()
+	s.AddRoute("/v{version}/user", handlerUser.RegisterUser, http.MethodPost)
+	s.AddRoute("/v{version}/user/login", handlerUser.Login, http.MethodPut)
 }

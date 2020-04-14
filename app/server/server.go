@@ -70,3 +70,31 @@ func Render(w http.ResponseWriter, r *http.Request, obj interface{}, status int)
 func OK(w http.ResponseWriter, r *http.Request, obj interface{}) {
 	Render(w, r, obj, http.StatusOK)
 }
+
+type errorResponse struct {
+	Messages []string `json:"messages"`
+	Code     string   `json:"code"`
+}
+
+func BadRequest(w http.ResponseWriter, r *http.Request, code string, messages ...string) {
+	err := &errorResponse{
+		Code:     code,
+		Messages: messages,
+	}
+	Render(w, r, err, http.StatusBadRequest)
+}
+
+func Forbidden(w http.ResponseWriter, r *http.Request, messages ...string) {
+	err := &errorResponse{
+		Code:     "FORBIDDEN",
+		Messages: messages,
+	}
+	Render(w, r, err, http.StatusForbidden)
+}
+
+func InternalServerError(w http.ResponseWriter, r *http.Request, err error) {
+	Render(w, r, &errorResponse{
+		Code:     "INTERNAL_SERVER_ERROR",
+		Messages: []string{err.Error()},
+	}, http.StatusInternalServerError)
+}
