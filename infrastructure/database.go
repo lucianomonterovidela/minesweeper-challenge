@@ -19,6 +19,8 @@ type IDataBaseProvider interface {
 
 	Upsert(collectionName string, id interface{}, val interface{}) error
 
+	Update(collectionName string, id interface{}, val interface{}) (bool, error)
+
 	ReplaceById(collectionName string, id interface{}, val interface{}) error
 
 	GetById(collectionName string, id interface{}) (*mongo.SingleResult, error)
@@ -93,6 +95,20 @@ func (provider *MongoDataBaseProvider) Upsert(collectionName string, id interfac
 		utils.LogInfo("inserted a single document: %s, in collection: %s", insertResult.InsertedID, collectionName)
 	}
 	return nil
+}
+
+func (provider *MongoDataBaseProvider) Update(collectionName string, id interface{}, val interface{}) (bool, error) {
+	collection := provider.client.Collection(collectionName)
+	filter := bson.M{"_id": id}
+	updateResult, err := collection.UpdateOne(context.TODO(), filter, val)
+	if err != nil {
+		return false, fmt.Errorf("error to replace in collection: %s, %v", collectionName, err)
+	}
+	if updateResult.ModifiedCount == 0 && updateResult.MatchedCount == 0 {
+		return false, nil
+	}
+	utils.LogInfo("updated a single document: %v, in collection: %s", id, collectionName)
+	return true, nil
 }
 
 func (provider *MongoDataBaseProvider) ReplaceById(collectionName string, id interface{}, val interface{}) error {

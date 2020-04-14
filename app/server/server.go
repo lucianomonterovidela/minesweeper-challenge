@@ -67,8 +67,22 @@ func Render(w http.ResponseWriter, r *http.Request, obj interface{}, status int)
 	w.Write(js)
 }
 
+func GetStringFromPath(r *http.Request, key string, defaultValue string) string {
+	str := mux.Vars(r)[key]
+
+	if len(str) < 1 {
+		return defaultValue
+	}
+
+	return str
+}
+
 func OK(w http.ResponseWriter, r *http.Request, obj interface{}) {
 	Render(w, r, obj, http.StatusOK)
+}
+
+func OkNotContent(w http.ResponseWriter, r *http.Request) {
+	Render(w, r, nil, http.StatusNoContent)
 }
 
 type errorResponse struct {
@@ -82,6 +96,14 @@ func BadRequest(w http.ResponseWriter, r *http.Request, code string, messages ..
 		Messages: messages,
 	}
 	Render(w, r, err, http.StatusBadRequest)
+}
+
+func NotFound(w http.ResponseWriter, r *http.Request, messages ...string) {
+	err := &errorResponse{
+		Code:     "NOT_FOUND",
+		Messages: messages,
+	}
+	Render(w, r, err, http.StatusNotFound)
 }
 
 func Forbidden(w http.ResponseWriter, r *http.Request, messages ...string) {

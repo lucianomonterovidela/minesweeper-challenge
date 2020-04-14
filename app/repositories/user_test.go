@@ -31,8 +31,8 @@ func TestUserRepository_InsertUser(t *testing.T) {
 			},
 			args: args{
 				user: &models.User{
-					UserName:"luciano",
-					Password:"password",
+					UserName: "luciano",
+					Password: "password",
 				},
 			},
 			assertMocks: func(t *testing.T) {
@@ -50,8 +50,8 @@ func TestUserRepository_InsertUser(t *testing.T) {
 			},
 			args: args{
 				user: &models.User{
-					UserName:"luciano",
-					Password:"password",
+					UserName: "luciano",
+					Password: "password",
 				},
 			},
 			assertMocks: func(t *testing.T) {

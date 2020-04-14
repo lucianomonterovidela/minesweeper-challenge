@@ -9,11 +9,11 @@ var Live = []byte(`
   },
   "database":{  
     "host":"localhost:27017",
-    "name":"minesweeper",
-    "user":"",
-    "password":"",
+    "name":"banner",
+    "user":"luciano",
+    "password":"luciano",
 	"timeout":10,
-    "enabled":true
+    "enabled":false
   }
 }
 `)
