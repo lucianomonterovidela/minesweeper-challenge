@@ -1,0 +1,354 @@
+{
+	"info": {
+		"_postman_id": "3f11b38b-8562-4a61-ace9-dd8051cc86b6",
+		"name": "minesweeper",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Healt",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:8080/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add user",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"userName\" : \"lucianoooo\",\n\t\"password\" : \"peerroassdas\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/v1/users",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login user",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"userName\" : \"lucianoooo\",\n\t\"password\" : \"peerroassdas\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/v1/users/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"users",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Pause game",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "dad7c0bf-2f7e-4d5f-b778-df76bb894e70",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "\t"
+				},
+				"url": {
+					"raw": "http://localhost:8080/v1/games/5e96390f7cf43b1e80683b8d/pause",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"games",
+						"5e96390f7cf43b1e80683b8d",
+						"pause"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Uncover Cell",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "dad7c0bf-2f7e-4d5f-b778-df76bb894e70",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"row\" : 3,\n\t\"column\" : 4\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/v1/games/5e9638867cf43b1e80683b8c/uncover",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"games",
+						"5e9638867cf43b1e80683b8c",
+						"uncover"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "mark red Cell",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "13ea444f-e2fa-451e-9000-ae9ebb2bc0f4"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"row\" : 1,\n\t\"column\" : 1\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/v1/games/5e963a3e518e5f46d7501aae/mark-red",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"games",
+						"5e963a3e518e5f46d7501aae",
+						"mark-red"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "mark question Cell ",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "13ea444f-e2fa-451e-9000-ae9ebb2bc0f4"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"row\" : 1,\n\t\"column\" : 2\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/v1/games/5e963a3e518e5f46d7501aae/mark-question",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"games",
+						"5e963a3e518e5f46d7501aae",
+						"mark-question"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Resume",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "dad7c0bf-2f7e-4d5f-b778-df76bb894e70"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"row\" : 3,\n\t\"column\" : 3\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/v1/games/5e96390f7cf43b1e80683b8d/resume",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"games",
+						"5e96390f7cf43b1e80683b8d",
+						"resume"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create game",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "13ea444f-e2fa-451e-9000-ae9ebb2bc0f4",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"rows\" : 4,\n\t\"columns\" : 4,\n\t\"mines\" : 1\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/v1/games",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"games"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Find Games",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "13ea444f-e2fa-451e-9000-ae9ebb2bc0f4"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:8080/v1/games",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"games"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
