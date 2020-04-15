@@ -9,9 +9,9 @@ var Live = []byte(`
   },
   "database":{  
     "host":"localhost:27017",
-    "name":"banner",
-    "user":"luciano",
-    "password":"luciano",
+    "name":"minesweeper",
+    "user":"",
+    "password":"",
 	"timeout":10,
     "enabled":false
   }
