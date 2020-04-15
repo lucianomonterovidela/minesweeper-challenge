@@ -1,7 +1,7 @@
 {
 	"info": {
-		"_postman_id": "3f11b38b-8562-4a61-ace9-dd8051cc86b6",
-		"name": "minesweeper",
+		"_postman_id": "d4d2ea0e-d359-49fa-a850-c37abd6ae397",
+		"name": "minesweeper challenge",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
 	"item": [
@@ -15,12 +15,15 @@
 					"raw": ""
 				},
 				"url": {
-					"raw": "http://localhost:8080/",
-					"protocol": "http",
+					"raw": "ec2-3-133-121-86.us-east-2.compute.amazonaws.com:3000/",
 					"host": [
-						"localhost"
+						"ec2-3-133-121-86",
+						"us-east-2",
+						"compute",
+						"amazonaws",
+						"com"
 					],
-					"port": "8080",
+					"port": "3000",
 					"path": [
 						""
 					]
@@ -45,12 +48,15 @@
 					"raw": "{\n\t\"userName\" : \"lucianoooo\",\n\t\"password\" : \"peerroassdas\"\n}"
 				},
 				"url": {
-					"raw": "http://localhost:8080/v1/users",
-					"protocol": "http",
+					"raw": "ec2-3-133-121-86.us-east-2.compute.amazonaws.com:3000/v1/users",
 					"host": [
-						"localhost"
+						"ec2-3-133-121-86",
+						"us-east-2",
+						"compute",
+						"amazonaws",
+						"com"
 					],
-					"port": "8080",
+					"port": "3000",
 					"path": [
 						"v1",
 						"users"
@@ -76,12 +82,15 @@
 					"raw": "{\n\t\"userName\" : \"lucianoooo\",\n\t\"password\" : \"peerroassdas\"\n}"
 				},
 				"url": {
-					"raw": "http://localhost:8080/v1/users/login",
-					"protocol": "http",
+					"raw": "ec2-3-133-121-86.us-east-2.compute.amazonaws.com:3000/v1/users/login",
 					"host": [
-						"localhost"
+						"ec2-3-133-121-86",
+						"us-east-2",
+						"compute",
+						"amazonaws",
+						"com"
 					],
-					"port": "8080",
+					"port": "3000",
 					"path": [
 						"v1",
 						"users",
@@ -98,7 +107,7 @@
 				"header": [
 					{
 						"key": "Authorization",
-						"value": "dad7c0bf-2f7e-4d5f-b778-df76bb894e70",
+						"value": "e042a726-f4fc-4dd8-af2e-aaf3df4929aa",
 						"type": "text"
 					}
 				],
@@ -107,12 +116,15 @@
 					"raw": "\t"
 				},
 				"url": {
-					"raw": "http://localhost:8080/v1/games/5e96390f7cf43b1e80683b8d/pause",
-					"protocol": "http",
+					"raw": "ec2-3-133-121-86.us-east-2.compute.amazonaws.com:3000/v1/games/5e96390f7cf43b1e80683b8d/pause",
 					"host": [
-						"localhost"
+						"ec2-3-133-121-86",
+						"us-east-2",
+						"compute",
+						"amazonaws",
+						"com"
 					],
-					"port": "8080",
+					"port": "3000",
 					"path": [
 						"v1",
 						"games",
@@ -136,7 +148,7 @@
 					},
 					{
 						"key": "Authorization",
-						"value": "dad7c0bf-2f7e-4d5f-b778-df76bb894e70",
+						"value": "e042a726-f4fc-4dd8-af2e-aaf3df4929aa",
 						"type": "text"
 					}
 				],
@@ -145,12 +157,15 @@
 					"raw": "{\n\t\"row\" : 3,\n\t\"column\" : 4\n}"
 				},
 				"url": {
-					"raw": "http://localhost:8080/v1/games/5e9638867cf43b1e80683b8c/uncover",
-					"protocol": "http",
+					"raw": "ec2-3-133-121-86.us-east-2.compute.amazonaws.com:3000/v1/games/5e9638867cf43b1e80683b8c/uncover",
 					"host": [
-						"localhost"
+						"ec2-3-133-121-86",
+						"us-east-2",
+						"compute",
+						"amazonaws",
+						"com"
 					],
-					"port": "8080",
+					"port": "3000",
 					"path": [
 						"v1",
 						"games",
@@ -162,7 +177,7 @@
 			"response": []
 		},
 		{
-			"name": "mark red Cell",
+			"name": "Mmark red Cell",
 			"request": {
 				"method": "PUT",
 				"header": [
@@ -175,7 +190,7 @@
 					{
 						"key": "Authorization",
 						"type": "text",
-						"value": "13ea444f-e2fa-451e-9000-ae9ebb2bc0f4"
+						"value": "e042a726-f4fc-4dd8-af2e-aaf3df4929aa"
 					}
 				],
 				"body": {
@@ -183,12 +198,15 @@
 					"raw": "{\n\t\"row\" : 1,\n\t\"column\" : 1\n}"
 				},
 				"url": {
-					"raw": "http://localhost:8080/v1/games/5e963a3e518e5f46d7501aae/mark-red",
-					"protocol": "http",
+					"raw": "ec2-3-133-121-86.us-east-2.compute.amazonaws.com:3000/v1/games/5e963a3e518e5f46d7501aae/mark-red",
 					"host": [
-						"localhost"
+						"ec2-3-133-121-86",
+						"us-east-2",
+						"compute",
+						"amazonaws",
+						"com"
 					],
-					"port": "8080",
+					"port": "3000",
 					"path": [
 						"v1",
 						"games",
@@ -200,7 +218,7 @@
 			"response": []
 		},
 		{
-			"name": "mark question Cell ",
+			"name": "Mark question Cell",
 			"request": {
 				"method": "PUT",
 				"header": [
@@ -213,7 +231,7 @@
 					{
 						"key": "Authorization",
 						"type": "text",
-						"value": "13ea444f-e2fa-451e-9000-ae9ebb2bc0f4"
+						"value": "e042a726-f4fc-4dd8-af2e-aaf3df4929aa"
 					}
 				],
 				"body": {
@@ -221,12 +239,15 @@
 					"raw": "{\n\t\"row\" : 1,\n\t\"column\" : 2\n}"
 				},
 				"url": {
-					"raw": "http://localhost:8080/v1/games/5e963a3e518e5f46d7501aae/mark-question",
-					"protocol": "http",
+					"raw": "ec2-3-133-121-86.us-east-2.compute.amazonaws.com:3000/v1/games/5e963a3e518e5f46d7501aae/mark-question",
 					"host": [
-						"localhost"
+						"ec2-3-133-121-86",
+						"us-east-2",
+						"compute",
+						"amazonaws",
+						"com"
 					],
-					"port": "8080",
+					"port": "3000",
 					"path": [
 						"v1",
 						"games",
@@ -251,7 +272,7 @@
 					{
 						"key": "Authorization",
 						"type": "text",
-						"value": "dad7c0bf-2f7e-4d5f-b778-df76bb894e70"
+						"value": "e042a726-f4fc-4dd8-af2e-aaf3df4929aa"
 					}
 				],
 				"body": {
@@ -259,12 +280,15 @@
 					"raw": "{\n\t\"row\" : 3,\n\t\"column\" : 3\n}"
 				},
 				"url": {
-					"raw": "http://localhost:8080/v1/games/5e96390f7cf43b1e80683b8d/resume",
-					"protocol": "http",
+					"raw": "ec2-3-133-121-86.us-east-2.compute.amazonaws.com:3000/v1/games/5e96390f7cf43b1e80683b8d/resume",
 					"host": [
-						"localhost"
+						"ec2-3-133-121-86",
+						"us-east-2",
+						"compute",
+						"amazonaws",
+						"com"
 					],
-					"port": "8080",
+					"port": "3000",
 					"path": [
 						"v1",
 						"games",
@@ -288,7 +312,7 @@
 					},
 					{
 						"key": "Authorization",
-						"value": "13ea444f-e2fa-451e-9000-ae9ebb2bc0f4",
+						"value": "e042a726-f4fc-4dd8-af2e-aaf3df4929aa",
 						"type": "text"
 					}
 				],
@@ -297,12 +321,15 @@
 					"raw": "{\n\t\"rows\" : 4,\n\t\"columns\" : 4,\n\t\"mines\" : 1\n}"
 				},
 				"url": {
-					"raw": "http://localhost:8080/v1/games",
-					"protocol": "http",
+					"raw": "ec2-3-133-121-86.us-east-2.compute.amazonaws.com:3000/v1/games",
 					"host": [
-						"localhost"
+						"ec2-3-133-121-86",
+						"us-east-2",
+						"compute",
+						"amazonaws",
+						"com"
 					],
-					"port": "8080",
+					"port": "3000",
 					"path": [
 						"v1",
 						"games"
@@ -328,7 +355,7 @@
 					{
 						"key": "Authorization",
 						"type": "text",
-						"value": "13ea444f-e2fa-451e-9000-ae9ebb2bc0f4"
+						"value": "e042a726-f4fc-4dd8-af2e-aaf3df4929aa"
 					}
 				],
 				"body": {
@@ -336,12 +363,15 @@
 					"raw": ""
 				},
 				"url": {
-					"raw": "http://localhost:8080/v1/games",
-					"protocol": "http",
+					"raw": "ec2-3-133-121-86.us-east-2.compute.amazonaws.com:3000/v1/games",
 					"host": [
-						"localhost"
+						"ec2-3-133-121-86",
+						"us-east-2",
+						"compute",
+						"amazonaws",
+						"com"
 					],
-					"port": "8080",
+					"port": "3000",
 					"path": [
 						"v1",
 						"games"

@@ -38,13 +38,16 @@ What we want to see is how well you handle yourself given the time you spend on 
 
 Please email your solution as soon as you have completed the challenge or the time is up.
 
-## Decisions
+## Access URL
+ec2-3-133-121-86.us-east-2.compute.amazonaws.com:3000
 
+## Decisions
 - A list is used instead of an array to house the cells
 - Unable to display time, was de-prioritized
 - User token is kept in memory for simplicity, this is not possible in distributed environments. I thought I would use redis but I didn't have much time
 - A NoSQL database was used
 - A lot of tests are missing
+- Swagger was de-prioritized
 
 
 
